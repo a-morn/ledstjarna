@@ -1,13 +1,13 @@
 from langchain_community.document_loaders import DirectoryLoader, JSONLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.embeddings import HuggingFaceEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import FAISS
 from typing import List
 import os
 import json
 
 class rag:
-    def __init__(self, data_dir: str = "data", persist_directory: str = "chroma_db"):
+    def __init__(self, data_dir: str = "data", persist_directory: str = "faiss_index"):
         """
         Initialize the RAG pipeline.
         
@@ -56,13 +56,12 @@ class rag:
         documents = self.load_documents()
         splits = self.text_splitter.split_documents(documents)
         
-        # Create and persist the vector store
-        vectorstore = Chroma.from_documents(
+        # Create and persist the FAISS vector store
+        vectorstore = FAISS.from_documents(
             documents=splits,
-            embedding=self.embeddings,
-            persist_directory=self.persist_directory
+            embedding=self.embeddings
         )
-        vectorstore.persist()
+        vectorstore.save_local(self.persist_directory)
         return vectorstore
     
     def get_retriever(self, search_kwargs: dict = None):
@@ -70,9 +69,9 @@ class rag:
         if not os.path.exists(self.persist_directory):
             vectorstore = self.create_vector_store()
         else:
-            vectorstore = Chroma(
-                persist_directory=self.persist_directory,
-                embedding_function=self.embeddings
+            vectorstore = FAISS.load_local(
+                self.persist_directory,
+                embeddings=self.embeddings
             )
         
         if search_kwargs is None:
