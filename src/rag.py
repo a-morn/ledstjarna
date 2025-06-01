@@ -66,7 +66,8 @@ class rag:
         else:
             vectorstore = FAISS.load_local(
                 self.persist_directory,
-                embeddings=self.embeddings
+                embeddings=self.embeddings,
+                allow_dangerous_deserialization=True
             )
         
         if search_kwargs is None:
