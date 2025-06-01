@@ -4,6 +4,7 @@ from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.tools import Tool
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
+import streamlit as st
 import os
 
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
