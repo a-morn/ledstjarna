@@ -1,6 +1,9 @@
 import streamlit as st
 from agent import create_agent, create_rag_tool
 import os
+import torch
+
+torch.classes.__path__ = []
 
 # Set page config
 st.set_page_config(
