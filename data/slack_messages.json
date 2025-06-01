@@ -1,0 +1,20 @@
+{
+    "messages": [
+        {
+            "text": "Hello, world!",
+            "author": "Alice"
+        },
+        {
+            "text": "Let's launch Ledstjärna on July 8th 2025",
+            "author": "Bob"
+        },
+        {
+            "test": "Sales team kickoff! The sales team (myself, Artem, Boris, and Cergei) will do a kickoff in Moscow next month!",
+            "author": "Artem"
+        },
+        {
+            "test": "Zebraman out...",
+            "author": "Zebraman"
+        }
+    ]
+}

@@ -1,0 +1,6 @@
+---
+description: How to structure code
+globs: 
+alwaysApply: false
+---
+Put code in the `src` directorty
