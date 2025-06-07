@@ -1,20 +1,56 @@
 {
-    "messages": [
+    "threads": [
         {
-            "text": "Hello, world!",
-            "author": "Alice"
+            "thread": "123",
+            "messages": [
+                {
+                    "text": "Hello, world!",
+                    "author": "Alice"
+                }
+            ]
         },
         {
-            "text": "Let's launch Ledstjärna on July 8th 2025",
-            "author": "Bob"
+            "thread": "124",
+            "messages": [
+                {
+                    "text": "Let's launch Ledstjärna on July 8th 2025",
+                    "author": "Bob"
+                },
+                {
+                    "test": "LFG!",
+                    "author": "David"
+                }
+            ]
         },
         {
-            "test": "Sales team kickoff! The sales team (myself, Artem, Boris, and Cergei) will do a kickoff in Moscow next month!",
-            "author": "Artem"
+            "thread": "125",
+            "messages": [
+                {
+                    "text": "Sales team kickoff! The sales team (myself, Artem, Boris, and Cergei) will do a kickoff in Moscow next month!",
+                    "author": "Artem"
+                }
+            ]
         },
         {
-            "test": "Zebraman out...",
-            "author": "Zebraman"
+            "thread": "126",
+            "messages": [
+                {
+                    "text": "Zebraman in the house!",
+                    "author": "Zebraman"
+                },
+                {
+                    "text": "Best EM ever <3",
+                    "author": "Ouroborus"
+                },
+                {
+                    "text": "+1",
+                    "author": "Orm"
+                },
+                {
+                    "text": "Zebraman out...",
+                    "author": "Zebraman"
+                }
+            ]
         }
     ]
 }
