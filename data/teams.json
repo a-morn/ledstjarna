@@ -1,0 +1,183 @@
+{
+    "teams": [
+        {
+            "name": "Leadership",
+            "members": [
+                {
+                    "name": "Alice",
+                    "role": "CEO"
+                },
+                {
+                    "name": "Bob",
+                    "role": "CTO"
+                },
+                {
+                    "name": "Charlie",
+                    "role": "CPO"
+                }
+            ],
+            "description": "The leadership team is responsible for the overall direction of the company."
+        },
+        {
+            "name": "Sales",
+            "members": [
+                {
+                    "name": "Artem",
+                    "role": "Sales manager"
+                },
+                {
+                    "name": "Boris",
+                    "role": "Account executive"
+                },
+                {
+                    "name": "Cergei",
+                    "role": "Account executive"
+                }
+            ],
+            "description": "The sales team is responsible for selling the company's products and services, GTM, and sales pipeliens."
+        },
+        {
+            "name": "Marketing",
+            "members": [
+                {
+                    "name": "David",
+                    "role": "Marketing manager"
+                },
+                {
+                    "name": "Eve",
+                    "role": "Marketing specialist"
+                },
+                {
+                    "name": "Frank",
+                    "role": "Marketing specialist"
+                }
+            ],
+            "description": "The marketing team is responsible for the company's marketing, branding and social media."
+        },
+        {
+            "name": "Dashboard",
+            "members": [
+                {
+                    "name": "Xavier",
+                    "role": "Product manager"
+                },
+                {
+                    "name": "Yggradsil",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Zebraman",
+                    "role": "Engineering Manager"
+                },
+                {
+                    "name": "Ouroborus",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Snake Plisken",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Solid Snake",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Orm",
+                    "role": "Engineer"
+                }
+            ],
+            "description": "The dashboard team is responsible for builds and maintains the Ledstjärna Dashboard."
+        },
+        {
+            "name": "AI",
+            "members": [
+                {
+                    "name": "Ziggy",
+                    "role": "Engineering Manager"
+                },
+                {
+                    "name": "Biggy",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Iggy",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Diggy",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Piggy",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Kiggy",
+                    "role": "Engineer"
+                }
+            ],
+            "description": "The AI team is responsible for the AI models and the AI-powered features of the Ledstjärna."
+        },
+        {
+            "name": "Data",
+            "members": [
+                {
+                    "name": "Jorge",
+                    "role": "Engineering Manager"
+                },
+                {
+                    "name": "Miguel",
+                    "role": "Data engineer"
+                },
+                {
+                    "name": "Maria",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Eva",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Diego",
+                    "role": "Engineer"
+                }
+            ],
+            "description": "The data team is responsible for the data pipeline and the data models of the Ledstjärna Dashboard."
+        },
+        {
+            "name": "Infrastructure",
+            "members": [
+                {
+                    "name": "Klara",
+                    "role": "Engineering Manager"
+                },
+                {
+                    "name": "Emma",
+                    "role": "Engineer"
+                },
+                {
+                    "name": "Josefin",
+                    "role": "Engineer"
+                }
+            ]
+        },
+        {
+            "name": "Customer Success",
+            "members": [
+                {
+                    "name": "Lena",
+                    "role": "Customer success manager"
+                },
+                {
+                    "name": "Lukas",
+                    "role": "Customer success specialist"
+                },
+                {
+                    "name": "Leia",
+                    "role": "Customer success specialist"
+                }
+            ],
+            "description": "The customer success team is responsible for the customer success of the Ledstjärna."
+        }
+    ]
+}
