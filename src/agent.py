@@ -9,23 +9,64 @@ import os
 
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 
-def create_rag_tool():
-    """Create a RAG tool for the agent to use."""
+def create_rag_tools():
+    """Create separate RAG tools for each data source."""
     rag_instance = rag()
-    retriever = rag_instance.get_retriever()
     
-    def search_documents(query: str) -> str:
-        """Search through documents using RAG."""
+    def search_slack_messages(query: str) -> str:
+        """Search through Slack messages."""
+        retriever = rag_instance.get_slack_retriever()
         docs = retriever.get_relevant_documents(query)
         if not docs:
-            return "No relevant information found."
+            return "No relevant Slack messages found."
         return "\n\n".join([doc.page_content for doc in docs])
     
-    return Tool(
-        name="document_search",
-        description="Useful for searching through documents to find information about teams, timelines and dependencies.",
-        func=search_documents
-    )
+    def search_google_docs(query: str) -> str:
+        """Search through Google Docs."""
+        retriever = rag_instance.get_google_docs_retriever()
+        docs = retriever.get_relevant_documents(query)
+        if not docs:
+            return "No relevant Google Docs found."
+        return "\n\n".join([doc.page_content for doc in docs])
+    
+    def search_teams(query: str) -> str:
+        """Search through team information."""
+        retriever = rag_instance.get_teams_retriever()
+        docs = retriever.get_relevant_documents(query)
+        if not docs:
+            return "No relevant team information found."
+        return "\n\n".join([doc.page_content for doc in docs])
+    
+    def search_company_info(query: str) -> str:
+        """Search through company information."""
+        retriever = rag_instance.get_company_info_retriever()
+        docs = retriever.get_relevant_documents(query)
+        if not docs:
+            return "No relevant company information found."
+        return "\n\n".join([doc.page_content for doc in docs])
+    
+    return [
+        Tool(
+            name="slack_search",
+            description="Useful for searching through Slack messages to find information about team communications, discussions, and updates.",
+            func=search_slack_messages
+        ),
+        Tool(
+            name="google_docs_search",
+            description="Useful for searching through Google Docs to find information about project documentation, plans, and specifications.",
+            func=search_google_docs
+        ),
+        Tool(
+            name="teams_search",
+            description="Useful for searching through team information to find details about team structures, roles, and responsibilities.",
+            func=search_teams
+        ),
+        Tool(
+            name="company_info_search",
+            description="Useful for searching through company information to find details about company policies, procedures, and general information.",
+            func=search_company_info
+        )
+    ]
 
 def create_agent():
     """Create an agent with RAG capabilities."""
@@ -35,28 +76,29 @@ def create_agent():
         temperature=0
     )
     
-    # Create the RAG tool
-    tools = [create_rag_tool()]
+    # Create the RAG tools
+    tools = create_rag_tools()
     
     # Create the prompt template
     prompt = ChatPromptTemplate.from_messages([
-        ("system", """You are an AI assistant that helps analyze and organization, their project timelines and dependencies.
-        Use the document_search tool to find relevant information.
-        When analyzing timelines, look for:
-        - Conflicting or overlapping schedules
-        - Timeline inconsistencies
-        - Critical path issues
+        ("system", """You are a senior technical project manager.
         
-        When analyzing dependencies, look for:
-        - Inter-team dependencies
-        - Potential blockers
-
-        When identifying teams and team members, look for:
-        - Who leads the team
-        - Who is in the team
-        - What is the team's name
+        Given the tools available, identify whether any team's plans depend on another team's work.
         
-        Always provide clear, structured responses with specific examples from the documents. Focus on required actions and be very succinct"""),
+        Be precise and list: 1) Source team, 2) Dependent team, 3) What depends on what, 4) Urgency (if any).
+        
+        When analyzing the messages, look for:
+        - What team is speaking?
+        - What are they planning?
+        - Is this plan related to another team's area?
+        - Does the message imply coordination or dependency?
+        
+        Use the appropriate search tool based on the type of information you need:
+        - slack_search: For team communications and discussions
+        - google_docs_search: For project documentation and plans
+        - teams_search: For team structures and roles
+        - company_info_search: For company policies and procedures
+        """),
         MessagesPlaceholder(variable_name="chat_history"),
         ("human", "{input}"),
         MessagesPlaceholder(variable_name="agent_scratchpad"),

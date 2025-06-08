@@ -1,5 +1,5 @@
 import streamlit as st
-from agent import create_agent, create_rag_tool
+from agent import create_agent
 import os
 import torch
 
@@ -39,7 +39,7 @@ with col2:
     with st.spinner("Analyzing team dependencies..."):
         # Enhanced prompt: first list teams/members, then analyze dependencies
         team_dep_prompt = (
-            "Find out if there is a team that needs to be notified of an ongoing project of another team. "
+            "Find out if there is a team that needs to be notified of an ongoing project of another team. Filter out cases where the team is already aware"
             "Present the results in a clear, structured format. Focus on who needs to be notified of what."
         )
         dependency_response = st.session_state.agent.invoke({

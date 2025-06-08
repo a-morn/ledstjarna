@@ -17,7 +17,7 @@
                     "author": "Bob"
                 },
                 {
-                    "test": "LFG!",
+                    "text": "LFG!",
                     "author": "David"
                 }
             ]
@@ -49,6 +49,112 @@
                 {
                     "text": "Zebraman out...",
                     "author": "Zebraman"
+                }
+            ]
+        },
+        {
+            "thread": "127",
+            "messages": [
+                {
+                    "text": "Hey team, I've noticed some performance degradation in our data pipeline. @Miguel @Maria can you take a look?",
+                    "author": "Jorge"
+                },
+                {
+                    "text": "On it! Looks like we're hitting some rate limits with the API. I'll adjust the batching strategy.",
+                    "author": "Miguel"
+                },
+                {
+                    "text": "I can help optimize the transformation layer if needed. Let me know what you find!",
+                    "author": "Maria"
+                }
+            ]
+        },
+        {
+            "thread": "128",
+            "messages": [
+                {
+                    "text": "🚀 New model training results are in! 95% accuracy on the test set. @Ziggy @Biggy",
+                    "author": "Iggy"
+                },
+                {
+                    "text": "That's amazing! Can we deploy this to staging today?",
+                    "author": "Ziggy"
+                },
+                {
+                    "text": "Already on it! Running final validation tests now.",
+                    "author": "Biggy"
+                }
+            ]
+        },
+        {
+            "thread": "129",
+            "messages": [
+                {
+                    "text": "Hey @Klara, we're seeing some latency spikes in production. Any ideas?",
+                    "author": "Emma"
+                },
+                {
+                    "text": "Let's check the monitoring dashboard. @Josefin can you pull up the metrics?",
+                    "author": "Klara"
+                },
+                {
+                    "text": "Found it! CPU usage is spiking during peak hours. We might need to scale up.",
+                    "author": "Josefin"
+                },
+                {
+                    "text": "FYI @Jorge",
+                    "author": "Emma"
+                }
+            ]
+        },
+        {
+            "thread": "130",
+            "messages": [
+                {
+                    "text": "Just got feedback from our enterprise customer about the new dashboard features. They love it! @Xavier",
+                    "author": "Lena"
+                },
+                {
+                    "text": "That's great to hear! @Yggradsil @Snake Plisken, can we prioritize the export functionality they requested?",
+                    "author": "Xavier"
+                },
+                {
+                    "text": "Already started on it! Should be ready for review by EOD.",
+                    "author": "Yggradsil"
+                }
+            ]
+        },
+        {
+            "thread": "131",
+            "messages": [
+                {
+                    "text": "Q2 marketing campaign planning starts today! @Eve @Frank, let's sync up after lunch.",
+                    "author": "David"
+                },
+                {
+                    "text": "I've got some great ideas for social media content!",
+                    "author": "Eve"
+                },
+                {
+                    "text": "Perfect, I'll prepare the analytics from our last campaign for reference.",
+                    "author": "Frank"
+                }
+            ]
+        },
+        {
+            "thread": "132",
+            "messages": [
+                {
+                    "text": "Leadership sync in 15 mins. @Bob @Charlie, I want to discuss our expansion plans.",
+                    "author": "Alice"
+                },
+                {
+                    "text": "I'll bring the product roadmap updates.",
+                    "author": "Charlie"
+                },
+                {
+                    "text": "Great, I'll share the technical feasibility assessment.",
+                    "author": "Bob"
                 }
             ]
         }

@@ -12,7 +12,7 @@
         },
         {
             "title": "GTM Argentina",
-            "content": "We're going to launch in Argentina on August 9th 2025. This means we need to localize the dashboard to Spanish",
+            "content": "We're going to launch in Argentina on September 13th 2025. This means we need to localize the dashboard to Spanish",
             "author": "Cergei"
         },
         {
@@ -20,6 +20,5 @@
             "author": "Xavier",
             "content": "The dashboard team is responsible for the dashboard. That includes stuff like accessibility, visualizations, and localization. The dashboard team includex Xavier, Yggradsil, and Zebraman"
         }
-
     ]
 }
