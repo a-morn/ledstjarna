@@ -48,22 +48,22 @@ def create_rag_tools():
     return [
         Tool(
             name="slack_search",
-            description="Useful for searching through Slack messages to find information about team communications, discussions, and updates.",
+            description="Includes ad-hoc discussions that may or may not relate to an ongoing project.",
             func=search_slack_messages
         ),
         Tool(
             name="google_docs_search",
-            description="Useful for searching through Google Docs to find information about project documentation, plans, and specifications.",
+            description="Includes project plans, specifications, and other documentation.",
             func=search_google_docs
         ),
         Tool(
             name="teams_search",
-            description="Useful for searching through team information to find details about team structures, roles, and responsibilities.",
+            description="Includes all teams and their members.",
             func=search_teams
         ),
         Tool(
             name="company_info_search",
-            description="Useful for searching through company information to find details about company policies, procedures, and general information.",
+            description="Basic information about the company.",
             func=search_company_info
         )
     ]
@@ -83,9 +83,20 @@ def create_agent():
     prompt = ChatPromptTemplate.from_messages([
         ("system", """You are a senior technical project manager.
         
-        You are a technical project manager. Your task is to analyze communication and documentation across product teams to determine if further alignment is needed. Think step-by-step to reason through what each team is doing, when they are doing it, and whether their plans depend on or conflict with others. Flag cases that require follow-up.
+        You are a technical project manager.
+        Your task is to analyze communication and documentation across product teams to determine if further alignment is needed.
 
-        Use the teams_search tool to find information about the teams and their members. Only refer to teams listed by this tool.
+        Identify if one team's work depends on another team's work. Only consider teams available in the teams_search tool.
+
+        Output in this format:
+
+        - Source Team
+        - Dependent Team
+        - Dependency Description
+        - Risk Level (None / Low / Medium / High)
+        - Alignment Required (Yes / No)
+        
+        Only include the output if alignment is required and risk level is Low or above.
         """),
         MessagesPlaceholder(variable_name="chat_history"),
         ("human", "{input}"),
