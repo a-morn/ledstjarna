@@ -5,7 +5,7 @@
             "messages": [
                 {
                     "text": "Hello, world!",
-                    "author": "Alice"
+                    "author": { "name": "Alice", "team": "Leadership" }
                 }
             ]
         },
@@ -14,11 +14,11 @@
             "messages": [
                 {
                     "text": "Let's launch Ledstjärna on July 8th 2025",
-                    "author": "Bob"
+                    "author": { "name": "Bob", "team": "Leadership" }
                 },
                 {
                     "text": "LFG!",
-                    "author": "David"
+                    "author": { "name": "David", "team": "Marketing" }
                 }
             ]
         },
@@ -27,7 +27,7 @@
             "messages": [
                 {
                     "text": "Sales team kickoff! The sales team (myself, Artem, Boris, and Cergei) will do a kickoff in Moscow next month!",
-                    "author": "Artem"
+                    "author": { "name": "Artem", "team": "Sales" }
                 }
             ]
         },
@@ -36,19 +36,19 @@
             "messages": [
                 {
                     "text": "Zebraman in the house!",
-                    "author": "Zebraman"
+                    "author": { "name": "Zebraman", "team": "Dashboard" }
                 },
                 {
                     "text": "Best EM ever <3",
-                    "author": "Ouroborus"
+                    "author": { "name": "Ouroborus", "team": "Dashboard" }
                 },
                 {
                     "text": "+1",
-                    "author": "Orm"
+                    "author": { "name": "Orm", "team": "Dashboard" }
                 },
                 {
                     "text": "Zebraman out...",
-                    "author": "Zebraman"
+                    "author": { "name": "Zebraman", "team": "Dashboard" }
                 }
             ]
         },
@@ -57,15 +57,15 @@
             "messages": [
                 {
                     "text": "Hey team, I've noticed some performance degradation in our data pipeline. @Miguel @Maria can you take a look?",
-                    "author": "Jorge"
+                    "author": { "name": "Jorge", "team": "Data" }
                 },
                 {
                     "text": "On it! Looks like we're hitting some rate limits with the API. I'll adjust the batching strategy.",
-                    "author": "Miguel"
+                    "author": { "name": "Miguel", "team": "Data" }
                 },
                 {
                     "text": "I can help optimize the transformation layer if needed. Let me know what you find!",
-                    "author": "Maria"
+                    "author": { "name": "Maria", "team": "Data" }
                 }
             ]
         },
@@ -74,15 +74,15 @@
             "messages": [
                 {
                     "text": "🚀 New model training results are in! 95% accuracy on the test set. @Ziggy @Biggy",
-                    "author": "Iggy"
+                    "author": { "name": "Iggy", "team": "AI" }
                 },
                 {
                     "text": "That's amazing! Can we deploy this to staging today?",
-                    "author": "Ziggy"
+                    "author": { "name": "Ziggy", "team": "AI" }
                 },
                 {
                     "text": "Already on it! Running final validation tests now.",
-                    "author": "Biggy"
+                    "author": { "name": "Biggy", "team": "AI" }
                 }
             ]
         },
@@ -91,19 +91,19 @@
             "messages": [
                 {
                     "text": "Hey @Klara, we're seeing some latency spikes in production. Any ideas?",
-                    "author": "Emma"
+                    "author": { "name": "Emma", "team": "Infrastructure" }
                 },
                 {
                     "text": "Let's check the monitoring dashboard. @Josefin can you pull up the metrics?",
-                    "author": "Klara"
+                    "author": { "name": "Klara", "team": "Infrastructure" }
                 },
                 {
                     "text": "Found it! CPU usage is spiking during peak hours. We might need to scale up.",
-                    "author": "Josefin"
+                    "author": { "name": "Josefin", "team": "Infrastructure" }
                 },
                 {
                     "text": "FYI @Jorge",
-                    "author": "Emma"
+                    "author": { "name": "Emma", "team": "Infrastructure" }
                 }
             ]
         },
@@ -112,15 +112,15 @@
             "messages": [
                 {
                     "text": "Just got feedback from our enterprise customer about the new dashboard features. They love it! @Xavier",
-                    "author": "Lena"
+                    "author": { "name": "Lena", "team": "Customer Success" }
                 },
                 {
                     "text": "That's great to hear! @Yggradsil @Snake Plisken, can we prioritize the export functionality they requested?",
-                    "author": "Xavier"
+                    "author": { "name": "Xavier", "team": "Dashboard" }
                 },
                 {
                     "text": "Already started on it! Should be ready for review by EOD.",
-                    "author": "Yggradsil"
+                    "author": { "name": "Yggradsil", "team": "Dashboard" }
                 }
             ]
         },
@@ -129,15 +129,15 @@
             "messages": [
                 {
                     "text": "Q2 marketing campaign planning starts today! @Eve @Frank, let's sync up after lunch.",
-                    "author": "David"
+                    "author": { "name": "David", "team": "Marketing" }
                 },
                 {
                     "text": "I've got some great ideas for social media content!",
-                    "author": "Eve"
+                    "author": { "name": "Eve", "team": "Marketing" }
                 },
                 {
                     "text": "Perfect, I'll prepare the analytics from our last campaign for reference.",
-                    "author": "Frank"
+                    "author": { "name": "Frank", "team": "Marketing" }
                 }
             ]
         },
@@ -146,15 +146,15 @@
             "messages": [
                 {
                     "text": "Leadership sync in 15 mins. @Bob @Charlie, I want to discuss our expansion plans.",
-                    "author": "Alice"
+                    "author": { "name": "Alice", "team": "Leadership" }
                 },
                 {
                     "text": "I'll bring the product roadmap updates.",
-                    "author": "Charlie"
+                    "author": { "name": "Charlie", "team": "Leadership" }
                 },
                 {
                     "text": "Great, I'll share the technical feasibility assessment.",
-                    "author": "Bob"
+                    "author": { "name": "Bob", "team": "Leadership" }
                 }
             ]
         }

@@ -3,22 +3,22 @@
         {
             "title": "Ledstjärna – planning doc",
             "content": "Panning doc for Ledstjärna. Let's launch on August 9th 2025",
-            "author": "Alice"
+            "author": { "name": "Alice", "team": "Leadership" }
         },
         {
             "title": "List of good restaurants in Stockholm",
             "content": "List: 1. Jerusalem kebab 2. Max 3. Eckstedts",
-            "author": "Bob"
+            "author": { "name": "Bob", "team": "Leadership" }
         },
         {
             "title": "GTM Argentina",
-            "content": "We're going to launch in Argentina on September 13th 2025. This means we need to localize the dashboard to Spanish",
-            "author": "Cergei"
+            "content": "We're going to launch in Argentina on September 13th 2025. This means dashboard needs to be localized to Spanish",
+            "author": { "name": "Cergei", "team": "Sales" }
         },
         {
             "title": "The dashboard team",
-            "author": "Xavier",
-            "content": "The dashboard team is responsible for the dashboard. That includes stuff like accessibility, visualizations, and localization. The dashboard team includex Xavier, Yggradsil, and Zebraman"
+            "content": "The dashboard team is responsible for the dashboard. That includes stuff like accessibility, visualizations, and localization. The dashboard team includex Xavier, Yggradsil, and Zebraman",
+            "author": { "name": "Xavier", "team": "Dashboard" }
         }
     ]
 }

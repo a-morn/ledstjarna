@@ -26,23 +26,10 @@ A leading light in the dark.
 col1, col2 = st.columns([1, 1])
 
 with col1:
-    st.subheader("Timeline Analysis")
+    st.subheader("TPM")
     with st.spinner("Analyzing timelines..."):
         # Get timeline analysis from agent
         timeline_response = st.session_state.agent.invoke({
-            "input": "Are there any conflicting timelines in the project? Please analyze and explain any conflicts you find."
+            "input": "Are there any conflicting timelines in the project? Are there any dependencies that are not aligned? Keep your answer short and concise. Focus on actions required, and which teams are involved for each action."
         })
         st.markdown(timeline_response["output"])
-
-with col2:
-    st.subheader("Team Dependency Analysis")
-    with st.spinner("Analyzing team dependencies..."):
-        # Enhanced prompt: first list teams/members, then analyze dependencies
-        team_dep_prompt = (
-            "Find out if there is a team that needs to be notified of an ongoing project of another team. Filter out cases where the team is already aware"
-            "Present the results in a clear, structured format. Focus on who needs to be notified of what."
-        )
-        dependency_response = st.session_state.agent.invoke({
-            "input": team_dep_prompt
-        })
-        st.markdown(dependency_response["output"])
